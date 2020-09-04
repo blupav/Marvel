@@ -1,0 +1,87 @@
+<style type="text/css">
+    #main_navbar {
+        position: fixed;
+        top: 150px;
+    }
+</style>
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-3">
+            <nav id="main_navbar">
+                <ul class="nav nav-pills nav-stacked">
+                    <li (click)='onIron()'><a href="#div_Ironman" class="navbarstyle">Iron Man</a></li>
+                    <li (click)='onCap()'><a href="#div_capA" class="navbarstyle">Captain America</a></li>
+                    <li (click)='onThor()'><a href="#div_Thor" class="navbarstyle">Thor</a></li>
+                    <li (click)='onbw()'><a href="#div_bw" class="navbarstyle">Black Widow</a></li>
+                    <li (click)='onhulk()'><a href="#div_hulk" class="navbarstyle">Hulk</a></li>
+                    <li (click)='onds()'><a href="#div_ds" class="navbarstyle">Doctor Strange</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="col-xs-9">
+            <div *ngIf="chosenAvenger=='avengers'">
+                <img src="assets/avengers.jpg" class="img-responsive">
+            </div>
+
+
+            <ng-container *ngFor="let marvel of compAvengers">
+                <tr *ngIf="chosenAvenger==marvel.Char_name && chosenAvenger == 'Iron man'" id="div_Ironman">
+                    <img src="assets/Iron_man.jpg" class="img-responsive fit-image" />
+
+            <div class="avengers">
+                <tr><strong>Name:</strong>{{marvel.Char_name}}</tr>
+                <tr><strong>Actor:</strong> {{marvel.Actor}}</tr>
+                <tr><strong>Appearance:</strong> {{marvel.Sequels}} </tr>
+                <tr><strong>Plot:</strong> {{marvel.Summary}} </tr>
+
+        </div>
+        </tr>
+
+        <div *ngIf="chosenAvenger == marvel.Char_name && chosenAvenger == 'Captain America'" id="div_capA" class="avengers">
+            <img src="assets/Cap_america.jpg" class="img-responsive fit-image" />
+            <tr><strong>Name:</strong>{{marvel.Char_name}}</tr>
+            <tr><strong>Actor:</strong> {{marvel.Actor}}</tr>
+            <tr><strong>Appearance:</strong> {{marvel.Sequels}} </tr>
+            <tr><strong>Plot:</strong> {{marvel.Summary}} </tr>
+
+
+        </div>
+
+        <div *ngIf="chosenAvenger == marvel.Char_name && chosenAvenger == 'Thor'" id="div_Thor" class="avengers">
+            <img src="assets/Thor.jpg" class="img-responsive fit-image" />
+            <tr><strong>Name:</strong>{{marvel.Char_name}}</tr>
+            <tr><strong>Actor:</strong> {{marvel.Actor}}</tr>
+            <tr><strong>Appearance:</strong> {{marvel.Sequels}} </tr>
+            <tr><strong>Plot:</strong> {{marvel.Summary}} </tr>
+
+        </div>
+        <div *ngIf="chosenAvenger == marvel.Char_name && chosenAvenger == 'Black Widow'" id="div_bw"class="avengers">
+            <img src="assets/black_widow.jpg" class="img-responsive fit-image" />
+            <tr><strong>Name:</strong>{{marvel.Char_name}}</tr>
+            <tr><strong>Actor:</strong> {{marvel.Actor}}</tr>
+            <tr><strong>Appearance:</strong> {{marvel.Sequels}} </tr>
+            <tr><strong>Plot:</strong> {{marvel.Summary}} </tr>
+
+        </div>
+        <div *ngIf="chosenAvenger == marvel.Char_name && chosenAvenger == 'Hulk'" id="div_hulk" class="avengers">
+            <img src="assets/Hulk.jpg" class="img-responsive fit-image" />
+            <tr><strong>Name:</strong>{{marvel.Char_name}}</tr>
+            <tr><strong>Actor:</strong> {{marvel.Actor}}</tr>
+            <tr><strong>Appearance:</strong> {{marvel.Sequels}} </tr>
+            <tr><strong>Plot:</strong> {{marvel.Summary}} </tr>
+
+        </div>
+        <div *ngIf="chosenAvenger == marvel.Char_name && chosenAvenger == 'Doctor Strange'" id="div_ds" class="avengers">
+            <img src="assets/Doc_Strange.jpg" class="img-responsive fit-image" />
+            <tr><strong>Name:</strong>{{marvel.Char_name}}</tr>
+            <tr><strong>Actor:</strong> {{marvel.Actor}}</tr>
+            <tr><strong>Appearance:</strong> {{marvel.Sequels}} </tr>
+            <tr><strong>Plot:</strong> {{marvel.Summary}} </tr>
+
+        </div>
+        </ng-container>
+    </div>
+</div>
+
+</div>
